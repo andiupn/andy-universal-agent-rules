@@ -5,6 +5,8 @@
 > Make your AI coding assistant smarter. Works with any project, any editor.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/andiupn/andy-universal-agent-rules?style=social)](https://github.com/andiupn/andy-universal-agent-rules/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/andiupn/andy-universal-agent-rules?style=social)](https://github.com/andiupn/andy-universal-agent-rules/network)
 [![Ko-Fi](https://img.shields.io/badge/Ko--fi-Support-ff5f5f?logo=ko-fi)](https://ko-fi.com/andiupn)
 
 ---
@@ -25,6 +27,8 @@ iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/m
 ```bash
 git clone https://github.com/andiupn/andy-universal-agent-rules.git
 cp -r andy-universal-agent-rules/.agent ./
+cp andy-universal-agent-rules/AGENTS.md ./
+rm -rf andy-universal-agent-rules  # cleanup
 ```
 
 ---
