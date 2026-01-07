@@ -1,0 +1,34 @@
+{
+  "last_updated": "2026-01-07T21:48:22.498851",
+  "active_profile": "linux",
+  "profiles": {
+    "linux": {
+      "detected": "2026-01-07T21:48:22.497466",
+      "os": "linux",
+      "username": "user",
+      "userHome": "/home/user",
+      "hostname": "hostname",
+      "projectRoot": "/path/to/andy-universal-agent-rules",
+      "webRoot": "/path/to/webroot",
+      "shell": "bash",
+      "techStack": {
+        "backend": [],
+        "frontend": [],
+        "database": [],
+        "tools": []
+      },
+      "databases": {
+        "mysql": {
+          "host": "127.0.0.1",
+          "port": 3306
+        },
+        "oracle": {
+          "host": "localhost",
+          "port": 1521
+        }
+      },
+      "python": "3.12.3",
+      "architecture": "x86_64"
+    }
+  }
+}

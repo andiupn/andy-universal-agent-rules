@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+# .cursor/ (Tracked for AI Agent Sync)
+# .kiro/ (Tracked for AI Agent Sync)
+# .windsurf/ (Tracked for AI Agent Sync)
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Backups
+_backups/
+
+# Legacy knowledge folder
+_o.knowledge/
+
+# Node modules
+node_modules/
+
+# Composer (if any)
+vendor/
+
+# Database
+*.sqlite
+*.db
+
+# Sensitive
+credentials/
+secrets/
+*.pem
+*.key
+id_rsa*
+
+# Test outputs
+coverage/
+.coverage
+htmlcov/
+
+# Artifacts (Antigravity brain folder - optional, comment out if you want to track)
+# .gemini/
+
+# Google Cloud SDK
+google-cloud-sdk/
+gcloud.tar.gz
+
+# Test Temporary Directory
+test/temp/

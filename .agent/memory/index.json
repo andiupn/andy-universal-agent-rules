@@ -1,0 +1,32 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-07T21:48:44.511900",
+  "totalEntries": 0,
+  "categories": {
+    "gotchas": {
+      "description": "Production bugs & solutions",
+      "count": 0,
+      "entries": []
+    },
+    "patterns": {
+      "description": "Code patterns that work",
+      "count": 0,
+      "entries": []
+    },
+    "decisions": {
+      "description": "Architectural decisions",
+      "count": 0,
+      "entries": []
+    },
+    "context": {
+      "description": "Project context & guides",
+      "count": 0,
+      "entries": []
+    },
+    "errors": {
+      "description": "Error messages & fixes",
+      "count": 0,
+      "entries": []
+    }
+  }
+}

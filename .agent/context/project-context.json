@@ -1,0 +1,21 @@
+{
+  "projectName": "<detected>",
+  "purpose": "Will be auto-detected from project structure",
+  "techStack": {
+    "backend": [],
+    "database": [],
+    "tools": ["git"],
+    "editor": []
+  },
+  "structure": {
+    "description": "Universal template - will adapt to your project structure",
+    "mainFolders": [".agent"]
+  },
+  "knownIssues": [],
+  "bestPractices": [
+    "Use .agent/scripts/save-knowledge.py to save new learnings",
+    "Run .agent/scripts/search-knowledge.py before starting work",
+    "Keep knowledge base up-to-date with validate-index.py"
+  ],
+  "lastUpdated": "<auto-updated>"
+}
