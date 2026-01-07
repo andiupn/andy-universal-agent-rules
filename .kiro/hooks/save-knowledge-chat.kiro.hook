@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Save Knowledge from Chat",
+  "description": "Menjalankan workflow untuk menyimpan pengetahuan penting dari chat session ke memory system menggunakan automation scripts",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Tolong jalankan workflow knowledge saving sesuai instruksi di file .agent/workflows/simpan-pengetahuan-dari-chat.md. Analisis seluruh chat session ini dan simpan pengetahuan penting ke memory system menggunakan automation scripts yang tersedia."
+  }
+}
