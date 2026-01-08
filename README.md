@@ -5,9 +5,43 @@
 > Make your AI coding assistant smarter. Works with any project, any editor.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/v/release/andiupn/andy-universal-agent-rules)](https://github.com/andiupn/andy-universal-agent-rules/releases)
+[![GitHub issues](https://img.shields.io/github/issues/andiupn/andy-universal-agent-rules)](https://github.com/andiupn/andy-universal-agent-rules/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/andiupn/andy-universal-agent-rules)](https://github.com/andiupn/andy-universal-agent-rules/pulls)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-blue)](https://github.com/andiupn/andy-universal-agent-rules)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+
 [![GitHub stars](https://img.shields.io/github/stars/andiupn/andy-universal-agent-rules?style=social)](https://github.com/andiupn/andy-universal-agent-rules/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/andiupn/andy-universal-agent-rules?style=social)](https://github.com/andiupn/andy-universal-agent-rules/network)
 [![Ko-Fi](https://img.shields.io/badge/Ko--fi-Support-ff5f5f?logo=ko-fi)](https://ko-fi.com/andiupn)
+
+---
+
+## 🎬 Quick Start
+
+**New to andy-universal-agent-rules?** Get up and running in 60 seconds:
+
+### Video Tutorial (Coming Soon)
+<!-- 
+[![Quick Start Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
+-->
+
+### 3-Step Install
+
+1. **Create a project folder**
+   ```bash
+   mkdir my-project && cd my-project
+   ```
+
+2. **Run the installer**
+   - **Windows:** `iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex`
+   - **Linux/Mac:** `curl -sL https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.sh | bash`
+
+3. **Start using workflows**
+   - Tell your AI: `"Run the maintenance workflow"`
+   - Or: `"Save learnings from this chat"`
+
+That's it! Your AI now has memory. 🧠✨
 
 ---
 
@@ -184,6 +218,83 @@ python .agent/scripts/validate-index.py --fix
 Before major changes:
 ```bash
 python .agent/scripts/backup-memory.py
+```
+
+---
+
+## 🔄 Using Workflows
+
+After installation, you get **6 AI-powered workflows** that make knowledge management effortless. Just talk to your AI!
+
+### `/maintenance` - Keep Knowledge Base Healthy
+
+Validates index, creates backups, updates environment automatically.
+
+**Usage:**
+```
+"Run the maintenance workflow"
+"Do maintenance on the knowledge base"
+```
+
+**What it does:**
+- ✅ Validates `index.json` integrity
+- ✅ Creates backup of `.agent/memory/`
+- ✅ Updates environment detection
+- ✅ Syncs statistics to AGENTS.md
+
+---
+
+### `/save-from-chat` - Save Current Session Learnings
+
+Scans your chat for gotchas, patterns, and decisions to save automatically.
+
+**Usage:**
+```
+"Save learnings from this chat"
+"Save knowledge from our conversation"
+```
+
+**What it does:**
+- 🔍 Analyzes chat history
+- 📝 Extracts gotchas, patterns, decisions
+- 💾 Saves to `.agent/memory/entries/`
+- 🔄 Updates index automatically
+
+---
+
+### `/search` - Find Existing Knowledge
+
+Quick search before starting work to avoid reinventing solutions.
+
+**Usage:**
+```
+"Search for MySQL gotchas"
+"Find knowledge about authentication"
+```
+
+**What it does:**
+- 🔎 Searches across all categories
+- 📊 Ranks by relevance
+- 📄 Shows matching entries with context
+
+---
+
+### Indonesian Workflows 🇮🇩
+
+For Indonesian speakers:
+- `/simpan-pengetahuan-dari-chat` - Save dari percakapan
+- `/simpan-pengetahuan-dari-folder` - Save dari folder
+
+---
+
+**Pro Tip:** Workflows work best with:
+- ✅ Antigravity (Gemini/Claude)
+- ✅ Cursor (Agent Mode)
+- ✅ Kiro AI
+
+For other editors, use Python scripts directly:
+```bash
+python .agent/scripts/save-knowledge.py --category gotchas "Your gotcha"
 ```
 
 ---
