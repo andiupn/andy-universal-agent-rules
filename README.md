@@ -11,6 +11,67 @@
 
 ---
 
+## 📂 Before You Install
+
+> **Important:** The installer will create `.agent/` folder and `AGENTS.md` file **in your current directory**.
+
+### ✅ Recommended Setup
+
+**Create a dedicated folder first:**
+
+```bash
+# Example 1: New project
+mkdir my-awesome-project
+cd my-awesome-project
+# Now run installer here ↓
+
+# Example 2: Existing project
+cd /path/to/your/existing/project
+# Now run installer here ↓
+
+# Example 3: Windows (Laragon www/)
+mkdir c:\laragon\www\my-project
+cd c:\laragon\www\my-project
+# Now run installer here ↓
+```
+
+### ❌ Common Mistake
+
+```bash
+# ❌ WRONG - Installing directly in www/ root
+cd c:\laragon\www\
+iwr -useb ... | iex  # This creates .agent/ in www/ directly!
+
+# ✅ CORRECT - Create project folder first
+cd c:\laragon\www\
+mkdir my-project
+cd my-project
+iwr -useb ... | iex  # Now .agent/ is in my-project/
+```
+
+### 📁 What Gets Installed
+
+After installation, your folder will look like this:
+
+```
+your-project/               # ← Your current directory
+├── AGENTS.md               # ← AI reads this first
+└── .agent/
+    ├── scripts/            # ← Python automation scripts (6 files)
+    ├── workflows/          # ← AI workflows (6 files) 🆕 CORE FEATURE
+    ├── memory/             # ← Your knowledge base
+    │   ├── index.json
+    │   └── entries/
+    │       ├── gotchas/
+    │       ├── patterns/
+    │       ├── decisions/
+    │       └── context/
+    └── context/            # ← Environment detection
+        └── environment.json
+```
+
+---
+
 ## ⚡ Quick Install
 
 ### Linux/Mac (One-liner)
@@ -79,6 +140,13 @@ your-project/
     │   ├── search-knowledge.py
     │   ├── validate-index.py
     │   └── backup-memory.py
+    ├── workflows/          # 🆕 AI workflows (CORE FEATURE)
+    │   ├── maintenance.md
+    │   ├── maintenance-agent-rules.md
+    │   ├── save-from-chat.md
+    │   ├── search.md
+    │   ├── simpan-pengetahuan-dari-chat.md
+    │   └── simpan-pengetahuan-dari-folder.md
     ├── memory/             # Your knowledge base
     │   ├── index.json
     │   └── entries/
@@ -88,7 +156,6 @@ your-project/
     │       └── context/
     ├── context/            # Environment detection
     │   └── environment.json
-    └── workflows/          # AI workflows
 ```
 
 ---

@@ -54,10 +54,22 @@ echo "📥 Downloading context files..."
 curl -sL "$REPO_RAW/.agent/context/session-init.md" -o ".agent/context/session-init.md"
 echo "   ✅ session-init.md"
 
-# Download workflows
+# Download workflows (CORE FEATURE)
 echo "📥 Downloading workflows..."
-curl -sL "$REPO_RAW/.agent/workflows/save-from-chat.md" -o ".agent/workflows/save-from-chat.md" 2>/dev/null || true
-curl -sL "$REPO_RAW/.agent/workflows/maintenance.md" -o ".agent/workflows/maintenance.md" 2>/dev/null || true
+WORKFLOWS=(
+    "maintenance.md"
+    "maintenance-agent-rules.md"
+    "save-from-chat.md"
+    "search.md"
+    "simpan-pengetahuan-dari-chat.md"
+    "simpan-pengetahuan-dari-folder.md"
+)
+
+for workflow in "${WORKFLOWS[@]}"; do
+    curl -sL "$REPO_RAW/.agent/workflows/$workflow" -o ".agent/workflows/$workflow" 2>/dev/null && \
+        echo "   ✅ $workflow" || \
+        echo "   ⚠️ Failed to download $workflow"
+done
 
 # Create empty index.json
 echo "📝 Creating empty knowledge index..."
