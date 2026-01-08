@@ -62,6 +62,26 @@ try {
     Write-Host "   ⚠️ session-init.md not available" -ForegroundColor Yellow
 }
 
+# Download workflows (CORE FEATURE)
+Write-Host "📥 Downloading workflows..." -ForegroundColor Yellow
+$workflows = @(
+    "maintenance.md",
+    "maintenance-agent-rules.md",
+    "save-from-chat.md",
+    "search.md",
+    "simpan-pengetahuan-dari-chat.md",
+    "simpan-pengetahuan-dari-folder.md"
+)
+
+foreach ($workflow in $workflows) {
+    try {
+        Invoke-WebRequest -Uri "$RepoRaw/.agent/workflows/$workflow" -OutFile ".agent/workflows/$workflow" -UseBasicParsing
+        Write-Host "   ✅ $workflow" -ForegroundColor Green
+    } catch {
+        Write-Host "   ⚠️ Failed to download $workflow" -ForegroundColor Yellow
+    }
+}
+
 # Create empty index.json
 Write-Host "📝 Creating empty knowledge index..." -ForegroundColor Yellow
 $indexJson = @'
