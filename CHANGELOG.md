@@ -10,9 +10,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- FAQ section in README.md addressing common questions
-- Troubleshooting section in README.md with solutions to common issues
-- Enhanced CHANGELOG.md with semantic versioning
+- **Quick Start Section** in README.md with 3-step installation guide
+- **Using Workflows Section** in README.md explaining `/maintenance`, `/save-from-chat`, `/search`
+- **FAQ Section** in README.md with 5 common questions:
+  - How is this different from .cursorrules?
+  - Can I use this with multiple projects?
+  - How do I uninstall?
+  - Does this work offline?
+  - Will this slow down my editor?
+- **Troubleshooting Section** in README.md with 5 solutions:
+  - Python not found
+  - Permission errors
+  - Git conflicts
+  - Workflows not working
+  - ModuleNotFoundError
+- **5 New Badges** to README.md:
+  - GitHub release version
+  - GitHub issues count
+  - GitHub pull requests count
+  - Platform support (Linux/macOS/Windows)
+  - Python requirement (3.10+)
+- **4 Issue Templates** in `.github/ISSUE_TEMPLATE/`:
+  - Bug Report template
+  - Feature Request template
+  - Question template
+  - Workflow Contribution template
+
+### Changed
+- **Enhanced CONTRIBUTING.md** with:
+  - Development setup guide
+  - Testing guide (scripts, installers, workflows, docs)
+  - Pull request workflow with conventional commits
+  - Detailed code style guidelines (Python, Shell, Markdown)
+  - Release process section
+- **Updated CHANGELOG.md** with semantic versioning adherence
+
+### Improved
+- Documentation structure for better user onboarding
+- Repository discoverability with additional badges
+- Contributor guidance with comprehensive CONTRIBUTING.md
 
 ---
 
