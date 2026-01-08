@@ -5,9 +5,43 @@
 > Make your AI coding assistant smarter. Works with any project, any editor.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub release](https://img.shields.io/github/v/release/andiupn/andy-universal-agent-rules)](https://github.com/andiupn/andy-universal-agent-rules/releases)
+[![GitHub issues](https://img.shields.io/github/issues/andiupn/andy-universal-agent-rules)](https://github.com/andiupn/andy-universal-agent-rules/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/andiupn/andy-universal-agent-rules)](https://github.com/andiupn/andy-universal-agent-rules/pulls)
+[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-blue)](https://github.com/andiupn/andy-universal-agent-rules)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+
 [![GitHub stars](https://img.shields.io/github/stars/andiupn/andy-universal-agent-rules?style=social)](https://github.com/andiupn/andy-universal-agent-rules/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/andiupn/andy-universal-agent-rules?style=social)](https://github.com/andiupn/andy-universal-agent-rules/network)
 [![Ko-Fi](https://img.shields.io/badge/Ko--fi-Support-ff5f5f?logo=ko-fi)](https://ko-fi.com/andiupn)
+
+---
+
+## 🎬 Quick Start
+
+**New to andy-universal-agent-rules?** Get up and running in 60 seconds:
+
+### Video Tutorial (Coming Soon)
+<!-- 
+[![Quick Start Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
+-->
+
+### 3-Step Install
+
+1. **Create a project folder**
+   ```bash
+   mkdir my-project && cd my-project
+   ```
+
+2. **Run the installer**
+   - **Windows:** `iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex`
+   - **Linux/Mac:** `curl -sL https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.sh | bash`
+
+3. **Start using workflows**
+   - Tell your AI: `"Run the maintenance workflow"`
+   - Or: `"Save learnings from this chat"`
+
+That's it! Your AI now has memory. 🧠✨
 
 ---
 
@@ -188,6 +222,83 @@ python .agent/scripts/backup-memory.py
 
 ---
 
+## 🔄 Using Workflows
+
+After installation, you get **6 AI-powered workflows** that make knowledge management effortless. Just talk to your AI!
+
+### `/maintenance` - Keep Knowledge Base Healthy
+
+Validates index, creates backups, updates environment automatically.
+
+**Usage:**
+```
+"Run the maintenance workflow"
+"Do maintenance on the knowledge base"
+```
+
+**What it does:**
+- ✅ Validates `index.json` integrity
+- ✅ Creates backup of `.agent/memory/`
+- ✅ Updates environment detection
+- ✅ Syncs statistics to AGENTS.md
+
+---
+
+### `/save-from-chat` - Save Current Session Learnings
+
+Scans your chat for gotchas, patterns, and decisions to save automatically.
+
+**Usage:**
+```
+"Save learnings from this chat"
+"Save knowledge from our conversation"
+```
+
+**What it does:**
+- 🔍 Analyzes chat history
+- 📝 Extracts gotchas, patterns, decisions
+- 💾 Saves to `.agent/memory/entries/`
+- 🔄 Updates index automatically
+
+---
+
+### `/search` - Find Existing Knowledge
+
+Quick search before starting work to avoid reinventing solutions.
+
+**Usage:**
+```
+"Search for MySQL gotchas"
+"Find knowledge about authentication"
+```
+
+**What it does:**
+- 🔎 Searches across all categories
+- 📊 Ranks by relevance
+- 📄 Shows matching entries with context
+
+---
+
+### Indonesian Workflows 🇮🇩
+
+For Indonesian speakers:
+- `/simpan-pengetahuan-dari-chat` - Save dari percakapan
+- `/simpan-pengetahuan-dari-folder` - Save dari folder
+
+---
+
+**Pro Tip:** Workflows work best with:
+- ✅ Antigravity (Gemini/Claude)
+- ✅ Cursor (Agent Mode)
+- ✅ Kiro AI
+
+For other editors, use Python scripts directly:
+```bash
+python .agent/scripts/save-knowledge.py --category gotchas "Your gotcha"
+```
+
+---
+
 ## 🧠 The Magic: Priority Loading
 
 When an AI opens your project, it automatically loads:
@@ -198,6 +309,197 @@ When an AI opens your project, it automatically loads:
 4. 📝 **Project Context** (what this project is about)
 
 **Your AI knows your project before you even ask.**
+
+---
+
+## ❓ FAQ
+
+### How is this different from just using `.cursorrules`?
+
+**`.cursorrules`** is a single static file that AI reads once.
+
+**andy-universal-agent-rules** is a **dynamic knowledge management system**:
+- ✅ **Searchable knowledge base** - Find solutions from past bugs
+- ✅ **Scripts for automation** - Save, search, validate, backup
+- ✅ **Workflows** - Pre-built commands like `/maintenance`, `/save-from-chat`
+- ✅ **Cross-editor support** - Works with Cursor, VSCode, Kiro, Windsurf, Antigravity
+- ✅ **Grows over time** - Your AI gets smarter as you add knowledge
+
+Think of it as `.cursorrules` + Git for your AI's memory.
+
+### Can I use this with multiple projects?
+
+**Yes!** Install in each project separately:
+
+```bash
+# Project 1
+cd ~/projects/my-app
+iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex
+
+# Project 2
+cd ~/projects/another-app
+iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex
+```
+
+Each project has its own independent knowledge base in `.agent/memory/`.
+
+### How do I uninstall?
+
+Simply delete the folders:
+
+```bash
+# Remove agent rules
+rm -rf .agent
+rm AGENTS.md
+
+# Or on Windows PowerShell
+Remove-Item -Recurse -Force .agent
+Remove-Item AGENTS.md
+```
+
+**Optional:** Remove from git history if committed:
+```bash
+git rm -r .agent AGENTS.md
+git commit -m "Remove andy-universal-agent-rules"
+```
+
+### Does this work offline?
+
+**Yes!** After installation, everything works offline:
+- ✅ Scripts run locally (Python stdlib only)
+- ✅ Knowledge base stored locally
+- ✅ No API calls or internet required
+
+**Only internet needed:**
+- During installation (to download files)
+- If using AI features (your AI needs internet, not this tool)
+
+### Will this slow down my editor?
+
+**No!** This system is:
+- ✅ **Passive** - Only read by AI when needed
+- ✅ **Lightweight** - Python scripts ~50KB total
+- ✅ **Fast** - All scripts run <500ms (see benchmarks)
+
+Your editor performance is unaffected.
+
+---
+
+## 🔧 Troubleshooting
+
+### Python not found
+
+**Error:** `python: command not found` or `'python' is not recognized`
+
+**Solution:**
+
+**Windows:**
+```powershell
+# Download Python from python.org
+# Or install via winget
+winget install Python.Python.3.12
+
+# Verify installation
+python --version
+```
+
+**Linux/Mac:**
+```bash
+# Ubuntu/Debian
+sudo apt install python3
+
+# macOS
+brew install python3
+
+# Verify
+python3 --version
+```
+
+### Permission errors during installation
+
+**Error:** `Permission denied` or `Access is denied`
+
+**Solution:**
+
+**Windows:**
+```powershell
+# Run PowerShell as Administrator
+# Right-click PowerShell → "Run as administrator"
+```
+
+**Linux/Mac:**
+```bash
+# Don't use sudo with installer!
+# Instead, ensure you have write access to current directory
+cd ~/projects/my-project  # Your user directory
+curl -sL ... | bash
+```
+
+### Git conflicts with `.agent/` folder
+
+**Error:** Merge conflicts in `.agent/memory/`
+
+**Solution:**
+
+**Option 1: Keep your version (recommended)**
+```bash
+git checkout --ours .agent/memory/
+git add .agent/memory/
+git commit
+```
+
+**Option 2: Merge manually**
+```bash
+# Resolve conflicts in .agent/memory/index.json
+# Keep both knowledge bases if needed
+git add .agent/memory/
+git commit
+```
+
+**Prevention:** Add to `.gitignore`:
+```
+.agent/memory/entries/
+.agent/context/environment.json
+```
+
+### Workflows not working / not found
+
+**Error:** AI says "workflow not found" or `/maintenance` doesn't work
+
+**Solution:**
+
+1. **Verify workflows installed:**
+```bash
+ls .agent/workflows/
+# Should show: maintenance.md, save-from-chat.md, etc.
+```
+
+2. **Reinstall if missing:**
+```bash
+iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex
+```
+
+3. **Check editor compatibility:**
+   - Workflows work with: Antigravity, Cursor (Agent Mode), Kiro
+   - For VSCode/Copilot: Use scripts directly instead
+
+### Scripts show `ModuleNotFoundError`
+
+**Error:** `ModuleNotFoundError: No module named 'xyz'`
+
+**This should NOT happen!** All scripts use Python stdlib only.
+
+**If it occurs:**
+```bash
+# Check Python version (need 3.10+)
+python --version
+
+# Verify it's using system Python, not a venv
+which python  # Linux/Mac
+where python  # Windows
+```
+
+**Still broken?** [Report issue](https://github.com/andiupn/andy-universal-agent-rules/issues)
 
 ---
 
@@ -217,6 +519,8 @@ If this saves you hours of debugging, consider supporting:
 ## 📜 License
 
 MIT License - Use it anywhere, modify freely.
+
+**Version tracking:** See [CHANGELOG.md](CHANGELOG.md) for release history.
 
 ---
 

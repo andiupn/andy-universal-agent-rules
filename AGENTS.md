@@ -348,7 +348,7 @@ Untuk kinerja optimal, gunakan decision tree berikut saat memilih tool.
 ### 2. Scripting Language: Python vs Node.js
 *Goal: Efisiensi coding & performance.*
 
-| Kebutuhan | Pilih Bahasa | Alasan |
+| Requirement | Choose Language | Reason |
 | :--- | :--- | :--- |
 | **Data Processing (CSV/Excel)** | **Python** 🐍 | Pandas jauh lebih cepat & mudah |
 | **Simple Automation** | **Python** 🐍 | Standard library (OS, Sys) robust |
