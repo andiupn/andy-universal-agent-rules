@@ -72,3 +72,6 @@ gcloud.tar.gz
 
 # Test Temporary Directory
 test/temp/
+
+# Donations
+donations/
