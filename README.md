@@ -1,3 +1,8 @@
+<div align="center">
+  **English** | 
+  <a href="README.id.md">Bahasa Indonesia</a>
+</div>
+
 # andy-universal-agent-rules
 
 > 🧠 **Universal AI Agent Knowledge Base & Rules System**
