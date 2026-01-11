@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-01-07T21:48:44.511900",
-  "totalEntries": 0,
+  "lastUpdated": "2026-01-11T12:18:03.568330",
+  "totalEntries": 1,
   "categories": {
     "gotchas": {
       "description": "Production bugs & solutions",
@@ -27,6 +27,18 @@
       "description": "Error messages & fixes",
       "count": 0,
       "entries": []
+    },
+    "learnings": {
+      "description": "Learnings entries",
+      "count": 1,
+      "entries": [
+        {
+          "id": "20260111-121803",
+          "title": "--help",
+          "file": "entries/learnings/help.md",
+          "tags": []
+        }
+      ]
     }
   }
 }
