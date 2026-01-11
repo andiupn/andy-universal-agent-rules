@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [Unreleased]
+## [1.2.0] - 2026-01-11
 
 ### Added
 - **Quick Start Section** in README.md with 3-step installation guide
@@ -119,6 +119,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version | Release Date | Type | Description |
 |---------|-------------|------|-------------|
+| **1.2.0** | 2026-01-11 | Minor | Enhanced documentation + Issue templates |
 | **1.1.0** | 2026-01-08 | Minor | Workflows as core feature + Enhanced docs |
 | **1.0.0** | 2026-01-07 | Major | Initial release |
 
