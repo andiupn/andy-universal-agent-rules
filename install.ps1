@@ -41,14 +41,16 @@ $scripts = @(
     "validate-index.py",
     "backup-memory.py",
     "detect-environment.py",
-    "sync-agents-stats.py"
+    "sync-agents-stats.py",
+    "agent-cli.ps1"
 )
 
 foreach ($script in $scripts) {
     try {
         Invoke-WebRequest -Uri "$RepoRaw/.agent/scripts/$script" -OutFile ".agent/scripts/$script" -UseBasicParsing
         Write-Host "   ✅ $script" -ForegroundColor Green
-    } catch {
+    }
+    catch {
         Write-Host "   ⚠️ Failed to download $script" -ForegroundColor Yellow
     }
 }
@@ -58,7 +60,8 @@ Write-Host "📥 Downloading context files..." -ForegroundColor Yellow
 try {
     Invoke-WebRequest -Uri "$RepoRaw/.agent/context/session-init.md" -OutFile ".agent/context/session-init.md" -UseBasicParsing
     Write-Host "   ✅ session-init.md" -ForegroundColor Green
-} catch {
+}
+catch {
     Write-Host "   ⚠️ session-init.md not available" -ForegroundColor Yellow
 }
 
@@ -77,7 +80,8 @@ foreach ($workflow in $workflows) {
     try {
         Invoke-WebRequest -Uri "$RepoRaw/.agent/workflows/$workflow" -OutFile ".agent/workflows/$workflow" -UseBasicParsing
         Write-Host "   ✅ $workflow" -ForegroundColor Green
-    } catch {
+    }
+    catch {
         Write-Host "   ⚠️ Failed to download $workflow" -ForegroundColor Yellow
     }
 }
@@ -177,7 +181,8 @@ Write-Host ""
 Write-Host "🔍 Detecting environment..." -ForegroundColor Cyan
 try {
     python .agent/scripts/detect-environment.py
-} catch {
+}
+catch {
     Write-Host "⚠️ Python not found. Run 'python .agent/scripts/detect-environment.py' manually." -ForegroundColor Yellow
 }
 
@@ -185,8 +190,11 @@ Write-Host ""
 Write-Host "✅ Installation complete!" -ForegroundColor Green
 Write-Host ""
 Write-Host "📚 Next steps:" -ForegroundColor Cyan
-Write-Host "   1. Read AGENTS.md for usage instructions"
-Write-Host "   2. Run: python .agent/scripts/search-knowledge.py --help"
+Write-Host "   1. Run interactive CLI: " -NoNewline
+Write-Host "powershell -File .agent/scripts/agent-cli.ps1" -ForegroundColor Yellow
+Write-Host "   2. Read AGENTS.md for usage instructions"
 Write-Host "   3. Start saving knowledge from your AI chat sessions!"
+Write-Host ""
+Write-Host "💡 Tip: The CLI works even without Python installed!" -ForegroundColor Green
 Write-Host ""
 Write-Host "💖 Support this project: https://ko-fi.com/andiupn" -ForegroundColor Magenta

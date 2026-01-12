@@ -201,27 +201,53 @@ your-project/
 
 ## 💡 How to Use
 
-### Save Knowledge from Chat
-When your AI solves a tricky bug, save it:
-```bash
-python .agent/scripts/save-knowledge.py --category gotchas "MySQL: Use 127.0.0.1 instead of localhost on Windows"
+### 🎮 Interactive CLI (Recommended)
+
+The easiest way to manage your knowledge base - **no Python required!**
+
+**Windows:**
+```powershell
+powershell -File .agent/scripts/agent-cli.ps1
 ```
 
-### Search Knowledge
-Before starting work, search existing knowledge:
+**Linux/Mac:**
 ```bash
+bash .agent/scripts/agent-cli.sh
+```
+
+This opens an interactive menu:
+```
+╔════════════════════════════════════════════════════╗
+║       andy-universal-agent-rules CLI               ║
+╠════════════════════════════════════════════════════╣
+║ 1. 🔍 Search Knowledge                             ║
+║ 2. 💾 Save New Knowledge                           ║
+║ 3. 🔧 Run Maintenance                              ║
+║ 4. 💼 Backup Memory                                ║
+║ 5. 📊 Show Stats                                   ║
+║ 6. ✅ Validate Index                               ║
+╚════════════════════════════════════════════════════╝
+```
+
+> 💡 **Tip:** The CLI auto-detects Python. If found, uses full features. If not, uses native scripts with basic functionality.
+
+---
+
+### 📜 Python Scripts (Advanced)
+
+For automation or scripting, use Python directly:
+
+```bash
+# Save knowledge
+python .agent/scripts/save-knowledge.py --category gotchas "Your gotcha here"
+
+# Search knowledge
 python .agent/scripts/search-knowledge.py "mysql connection"
-```
 
-### Validate Index
-Keep your knowledge base healthy:
-```bash
+# Validate index
 python .agent/scripts/validate-index.py --fix
-```
 
-### Backup
-Before major changes:
-```bash
+# Backup
 python .agent/scripts/backup-memory.py
 ```
 
