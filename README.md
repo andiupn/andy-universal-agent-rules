@@ -146,6 +146,48 @@ A **knowledge management system** for AI coding assistants. Instead of explainin
 
 ---
 
+## 💡 Real-World Example
+
+> See how knowledge base saves hours of debugging time.
+
+### Scenario: The MySQL Connection Bug 🐛
+
+**Day 1 - New Developer Joins:**
+```
+Developer: "Help, MySQL connection refused!"
+AI: "I don't know your setup. Try checking the port..."
+Developer: *Googles for 30 minutes*
+Solution: Use 127.0.0.1 instead of localhost on Windows
+```
+
+**Developer saves the learning:**
+```bash
+python .agent/scripts/save-knowledge.py --category gotchas \
+  "MySQL Windows: Use 127.0.0.1 instead of localhost"
+```
+
+**Day 30 - Another Developer Gets Same Error:**
+```
+Developer: "Help, MySQL connection refused!"
+AI: "I found a gotcha in your knowledge base! 
+     Use 127.0.0.1 instead of localhost on Windows."
+Developer: *Fixed in 5 seconds* ✅
+```
+
+**Time saved:** 30 minutes → 5 seconds 🚀
+
+### More Examples:
+
+| Problem | Without Knowledge Base | With Knowledge Base |
+|---------|----------------------|---------------------|
+| Oracle commit bug | Debug 2 hours | Fixed in 1 minute |
+| PHP version conflict | Google 15 minutes | AI knows immediately |
+| API rate limit | Trial & error | Pattern already saved |
+
+**Your AI learns from YOUR mistakes so you never repeat them!**
+
+---
+
 ## 🔧 Supported Editors
 
 | Editor | Status |

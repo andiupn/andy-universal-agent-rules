@@ -146,6 +146,48 @@ Sebuah **sistem manajemen pengetahuan** untuk asisten koding AI. Daripada menjel
 
 ---
 
+## 💡 Contoh Penggunaan Nyata
+
+> Lihat bagaimana knowledge base menghemat waktu debugging berjam-jam.
+
+### Skenario: Bug Koneksi MySQL 🐛
+
+**Hari ke-1 - Developer Baru Bergabung:**
+```
+Developer: "Tolong, MySQL connection refused!"
+AI: "Saya tidak tahu setup Anda. Coba cek portnya..."
+Developer: *Googling 30 menit*
+Solusi: Gunakan 127.0.0.1 bukan localhost di Windows
+```
+
+**Developer menyimpan pembelajaran:**
+```bash
+python .agent/scripts/save-knowledge.py --category gotchas \
+  "MySQL Windows: Gunakan 127.0.0.1 bukan localhost"
+```
+
+**Hari ke-30 - Developer Lain Kena Error Sama:**
+```
+Developer: "Tolong, MySQL connection refused!"
+AI: "Saya menemukan gotcha di knowledge base Anda! 
+     Gunakan 127.0.0.1 bukan localhost di Windows."
+Developer: *Selesai dalam 5 detik* ✅
+```
+
+**Waktu yang dihemat:** 30 menit → 5 detik 🚀
+
+### Contoh Lainnya:
+
+| Masalah | Tanpa Knowledge Base | Dengan Knowledge Base |
+|---------|----------------------|----------------------|
+| Bug commit Oracle | Debug 2 jam | Selesai 1 menit |
+| Konflik versi PHP | Google 15 menit | AI langsung tahu |
+| API rate limit | Trial & error | Pattern sudah tersimpan |
+
+**AI Anda belajar dari kesalahan ANDA sehingga tidak pernah terulang!**
+
+---
+
 ## 🔧 Editor yang Didukung
 
 | Editor | Status |
