@@ -210,6 +210,37 @@ Developer: *Selesai dalam 5 detik* ✅
 
 ---
 
+## 📁 Yang Diinstal
+
+```
+your-project/
+├── AGENTS.md               # AI membaca ini lebih dulu
+└── .agent/
+    ├── scripts/            # Script otomasi
+    │   ├── save-knowledge.py
+    │   ├── search-knowledge.py
+    │   ├── validate-index.py
+    │   └── backup-memory.py
+    ├── workflows/          # 🆕 Workflow AI (FITUR INTI)
+    │   ├── maintenance.md
+    │   ├── maintenance-agent-rules.md
+    │   ├── save-from-chat.md
+    │   ├── search.md
+    │   ├── simpan-pengetahuan-dari-chat.md
+    │   └── simpan-pengetahuan-dari-folder.md
+    ├── memory/             # Basis pengetahuan Anda
+    │   ├── index.json
+    │   └── entries/
+    │       ├── gotchas/
+    │       ├── patterns/
+    │       ├── decisions/
+    │       └── context/
+    ├── context/            # Deteksi environment
+    │   └── environment.json
+```
+
+---
+
 ## 💡 Cara Penggunaan
 
 ### Simpan Pengetahuan dari Chat

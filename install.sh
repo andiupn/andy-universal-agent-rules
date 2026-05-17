@@ -42,17 +42,27 @@ SCRIPTS=(
     "backup-memory.py"
     "detect-environment.py"
     "sync-agents-stats.py"
+    "agent-cli.sh"
 )
 
 for script in "${SCRIPTS[@]}"; do
-    curl -sL "$REPO_RAW/.agent/scripts/$script" -o ".agent/scripts/$script"
-    echo "   ✅ $script"
+    if curl -sL --fail "$REPO_RAW/.agent/scripts/$script" -o ".agent/scripts/$script"; then
+        echo "   ✅ $script"
+    else
+        echo "   ⚠️ Failed to download $script"
+    fi
 done
+
+# Make agent-cli.sh executable
+chmod +x .agent/scripts/agent-cli.sh 2>/dev/null || true
 
 # Download context files
 echo "📥 Downloading context files..."
-curl -sL "$REPO_RAW/.agent/context/session-init.md" -o ".agent/context/session-init.md"
-echo "   ✅ session-init.md"
+if curl -sL --fail "$REPO_RAW/.agent/context/session-init.md" -o ".agent/context/session-init.md"; then
+    echo "   ✅ session-init.md"
+else
+    echo "   ⚠️ session-init.md not available"
+fi
 
 # Download workflows (CORE FEATURE)
 echo "📥 Downloading workflows..."
@@ -189,8 +199,9 @@ echo ""
 echo "✅ Installation complete!"
 echo ""
 echo "📚 Next steps:"
-echo "   1. Read AGENTS.md for usage instructions"
-echo "   2. Run: python .agent/scripts/search-knowledge.py --help"
-echo "   3. Start saving knowledge from your AI chat sessions!"
+echo "   1. Run interactive CLI: bash .agent/scripts/agent-cli.sh"
+echo "   2. Read AGENTS.md for usage instructions"
+echo "   3. Run: python .agent/scripts/search-knowledge.py --help"
+echo "   4. Start saving knowledge from your AI chat sessions!"
 echo ""
 echo "💖 Support this project: https://ko-fi.com/andiupn"
