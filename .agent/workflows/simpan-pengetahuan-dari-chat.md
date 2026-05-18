@@ -243,7 +243,7 @@ dijelaskan ulang tentang project ini!
 ### Opsi 1: Copy-Paste ke Chat
 
 ```
-@.agent/promnt/cara-simpan-pengetahuan-dari-chat.md
+@.agent/workflows/simpan-pengetahuan-dari-chat.md
 
 Tolong simpan seluruh pengetahuan dari chat session ini
 sesuai instruksi di file tersebut.
@@ -257,7 +257,7 @@ Tambahkan di `AGENTS.md`:
 ## End of Session Protocol
 
 Sebelum session berakhir, AI agent WAJIB:
-1. Baca `.agent/promnt/cara-simpan-pengetahuan-dari-chat.md`
+1. Baca `.agent/workflows/simpan-pengetahuan-dari-chat.md`
 2. Simpan semua learnings dari session ini
 3. Update project context
 4. Buat summary report

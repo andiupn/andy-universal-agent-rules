@@ -225,8 +225,8 @@ python .agent/scripts/validate-index.py --fix
 ## 🔗 Integration Points
 
 - **Main Documentation:** [AGENTS.md](../AGENTS.md) (34KB, 189 entries)
-- **Project Structure:** [PROJECT_STRUCTURE.md](../PROJECT_STRUCTURE.md)
-- **Testing Guide:** [test/README.md](../test/README.md)
+- **Project Structure:** [README.md](../README.md)
+- **Testing Guide:** [CONTRIBUTING.md](../CONTRIBUTING.md)
 - **Knowledge Base:** [.agent/memory/index.json](../.agent/memory/index.json)
 
 ---

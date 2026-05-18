@@ -210,29 +210,86 @@ Developer: *Selesai dalam 5 detik* ✅
 
 ---
 
+## 📁 Yang Diinstal
+
+```
+your-project/
+├── AGENTS.md               # AI membaca ini lebih dulu
+└── .agent/
+    ├── scripts/            # Script otomasi
+    │   ├── save-knowledge.py
+    │   ├── search-knowledge.py
+    │   ├── validate-index.py
+    │   └── backup-memory.py
+    ├── workflows/          # 🆕 Workflow AI (FITUR INTI)
+    │   ├── maintenance.md
+    │   ├── maintenance-agent-rules.md
+    │   ├── save-from-chat.md
+    │   ├── search.md
+    │   ├── simpan-pengetahuan-dari-chat.md
+    │   └── simpan-pengetahuan-dari-folder.md
+    ├── memory/             # Basis pengetahuan Anda
+    │   ├── index.json
+    │   └── entries/
+    │       ├── gotchas/
+    │       ├── patterns/
+    │       ├── decisions/
+    │       └── context/
+    ├── context/            # Deteksi environment
+    │   └── environment.json
+```
+
+---
+
 ## 💡 Cara Penggunaan
 
-### Simpan Pengetahuan dari Chat
-Ketika AI Anda memecahkan bug yang sulit, simpan solusinya:
+### 🎮 CLI Interaktif (Direkomendasikan)
+
+Cara termudah mengelola knowledge base — **tanpa Python!**
+
+**Windows:**
+```powershell
+powershell -File .agent/scripts/agent-cli.ps1
+```
+
+**Linux/Mac:**
 ```bash
+bash .agent/scripts/agent-cli.sh
+```
+
+Membuka menu interaktif:
+```
+╔════════════════════════════════════════════════════╗
+║       andy-universal-agent-rules CLI               ║
+╠════════════════════════════════════════════════════╣
+║ 1. 🔍 Search Knowledge                             ║
+║ 2. 💾 Save New Knowledge                           ║
+║ 3. 🔧 Run Maintenance                              ║
+║ 4. 💼 Backup Memory                                ║
+║ 5. 📊 Show Stats                                   ║
+║ 6. ✅ Validate Index                               ║
+╚════════════════════════════════════════════════════╝
+```
+
+> 💡 **Tips:** CLI otomatis mendeteksi Python. Jika ada, menggunakan fitur penuh. Jika tidak, menggunakan native script dengan fungsionalitas dasar.
+
+---
+
+### 📜 Python Scripts (Lanjutan)
+
+Untuk otomasi atau scripting, gunakan Python langsung:
+
+```bash
+# Simpan pengetahuan
 python .agent/scripts/save-knowledge.py --category gotchas "MySQL: Gunakan 127.0.0.1 daripada localhost di Windows"
-```
 
-### Cari Pengetahuan
-Sebelum mulai bekerja, cari pengetahuan yang sudah ada:
-```bash
+# Cari pengetahuan
 python .agent/scripts/search-knowledge.py "koneksi mysql"
-```
 
-### Validasi Index
-Menjaga kesehatan basis pengetahuan Anda:
-```bash
+# Validasi index
 python .agent/scripts/validate-index.py --fix
-```
 
-### Backup
-Sebelum perubahan besar:
-```bash
+# Backup
 python .agent/scripts/backup-memory.py
 ```
 
