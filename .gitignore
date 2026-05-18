@@ -58,6 +58,9 @@ secrets/
 *.key
 id_rsa*
 
+# Local MCP config (may contain personal paths/credentials — commit only the .example version)
+.cursor/mcp-config.local.json
+
 # Test outputs
 coverage/
 .coverage
