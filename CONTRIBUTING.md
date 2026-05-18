@@ -192,7 +192,7 @@ Use [Conventional Commits](https://www.conventionalcommits.org/):
 **Follow PEP 8:**
 - 4 spaces for indentation
 - Max line length: 88 characters (Black formatter)
-- Use des criptive variable names
+- Use descriptive variable names
 - Add docstrings to functions
 
 **Example:**
