@@ -57,6 +57,8 @@ secrets/
 *.pem
 *.key
 id_rsa*
+.env
+.env.*
 
 # Local MCP config (may contain personal paths/credentials — commit only the .example version)
 .cursor/mcp-config.local.json
