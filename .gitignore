@@ -69,7 +69,7 @@ coverage/
 htmlcov/
 
 # Artifacts (Antigravity brain folder - optional, comment out if you want to track)
-# .gemini/
+.gemini/
 
 # Google Cloud SDK
 google-cloud-sdk/
