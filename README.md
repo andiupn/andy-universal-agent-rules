@@ -597,6 +597,18 @@ MIT License - Use it anywhere, modify freely.
 
 ---
 
+## 📦 AI Agent Template Ecosystem
+
+Kami menyediakan berbagai template workspace siap pakai yang dioptimalkan secara mendalam untuk kolaborasi AI Agent:
+
+- 🛰️ **[AntiGravity Templates](https://github.com/andiupn/antigravity-starter)** — Teroptimasi untuk Gemini 3.5 Flash & Next.js 16/React 19/Flutter.
+- 🤖 **[Claude Code Templates](https://github.com/andiupn/claude-code-starter)** — Teroptimasi untuk Claude Code CLI.
+- 🧠 **[Codex Templates](https://github.com/andiupn/codex-starter)** — Teroptimasi untuk OpenAI/Codex API.
+
+*Dapatkan Edisi PRO (Premium Multi-Project Workspace) dengan fitur terlengkap untuk masing-masing stack di [kuncimu.com](https://kuncimu.com).*
+
+---
+
 ## 🌟 Star This Repo!
 
 If you find this useful, please ⭐ star this repo to help others find it!
