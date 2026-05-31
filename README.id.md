@@ -1,606 +1,86 @@
+# Andy Universal Agent Rules 🛰️
+
 <div align="center">
-  <a href="README.md">English</a> | 
-  **Bahasa Indonesia**
+  <a href="README.md">English</a> | <strong>Bahasa Indonesia</strong>
 </div>
 
-# andy-universal-agent-rules
+<br />
 
-> 🧠 **Basis Pengetahuan & Sistem Aturan Agen AI Universal**
-> 
-> Jadikan asisten koding AI Anda lebih pintar. Bekerja dengan project apa saja, editor apa saja.
+<div align="center">
+  <h3><strong>Model AI tercanggih sekalipun tidak berguna tanpa instruksi yang tepat.</strong></h3>
+  <p><strong>Installer satu baris yang ringan dan tanpa dependensi untuk menyuntikkan aturan pengodean standar emas, direktif agen otonom, dan skrip pemeliharaan memori ke dalam proyek apa pun dalam 1 detik.</strong></p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  <p>Hentikan halusinasi AI, refaktor kode yang berantakan, dan kehilangan konteks di seluruh sesi editor. Berikan kekuatan instan pada Cursor, Gemini, Claude Code, dan Windsurf Anda.</p>
+</div>
+
+> 📦 Gold Standard Template by **andiupn** ([kuncimu.com](https://kuncimu.com)) · Dilisensikan di bawah [MIT License](LICENSE)  
+> ☕ Jika bermanfaat, [beli saya kopi](https://ko-fi.com/andiupn) · 🚀 Mencari preset workspace terkurasi? Coba [Starter & PRO Ekosistem](https://kuncimu.com)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/github/v/release/andiupn/andy-universal-agent-rules)](https://github.com/andiupn/andy-universal-agent-rules/releases)
-[![GitHub issues](https://img.shields.io/github/issues/andiupn/andy-universal-agent-rules)](https://github.com/andiupn/andy-universal-agent-rules/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/andiupn/andy-universal-agent-rules)](https://github.com/andiupn/andy-universal-agent-rules/pulls)
-[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-blue)](https://github.com/andiupn/andy-universal-agent-rules)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
-
-[![GitHub stars](https://img.shields.io/github/stars/andiupn/andy-universal-agent-rules?style=social)](https://github.com/andiupn/andy-universal-agent-rules/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/andiupn/andy-universal-agent-rules?style=social)](https://github.com/andiupn/andy-universal-agent-rules/network)
 [![Ko-Fi](https://img.shields.io/badge/Ko--fi-Support-ff5f5f?logo=ko-fi)](https://ko-fi.com/andiupn)
+[![Patreon](https://img.shields.io/badge/Patreon-Support-f96854?logo=patreon)](https://patreon.com/AndiUpn)
+[![Trakteer](https://img.shields.io/badge/Trakteer-Support-red?logo=trakteer)](https://trakteer.id/andi_upn/gift)
+[![Saweria](https://img.shields.io/badge/Saweria-Support-yellow?logo=saweria)](https://saweria.co/andiupn)
 
 ---
 
-## 🎬 Mulai Cepat
-
-**Baru menggunakan andy-universal-agent-rules?** Instalasi dalam 60 detik:
-
-### Video Tutorial (Segera Hadir)
-<!-- 
-[![Quick Start Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
--->
-
-### 3 Langkah Instalasi
-
-1. **Buat folder project**
-   ```bash
-   mkdir proyek-saya && cd proyek-saya
-   ```
-
-2. **Jalankan installer**
-   - **Windows:** `iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex`
-   - **Linux/Mac:** `curl -sL https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.sh | bash`
-
-3. **Mulai gunakan workflows**
-   - Perintahkan AI Anda: `"Run the maintenance workflow"` (Jalankan workflow maintenance)
-   - Atau: `"Simpan pengetahuan dari chat ini"`
-
-Selesai! AI Anda sekarang memiliki memori. 🧠✨
+## 💡 Masalahnya: Mengapa Model AI Cerdas Menulis Kode Buruk
+Model AI canggih (seperti GPT-4o, Claude 3.5 Sonnet, dan Gemini Pro) memiliki kapasitas penalaran yang luar biasa. Namun tanpa adanya pedoman arsitektur yang ketat, pembatasan folder yang jelas, dan aturan pemformatan terpadu, mereka menulis kode yang tidak terstruktur, mengabaikan konvensi proyek Anda, dan mengulangi kesalahan yang sama di sesi baru.
 
 ---
 
-## 📂 Sebelum Anda Menginstall
+## ⚡ Solusinya: Tata Kelola AI Standar Emas (Gold Standard)
 
-> **Penting:** Installer akan membuat folder `.agent/` dan file `AGENTS.md` **di direktori Anda saat ini**.
+### 1. 📜 Aturan Lintas-Editor Universal
+Menyuntikkan instruksi AI berkinerja tinggi (setara dengan `AGENTS.md` dan `.cursorrules`) yang kompatibel dengan semua editor AI utama—**Cursor, Windsurf, Claude Code, GitHub Copilot, dan Kiro**. Satu aturan untuk menguasai semuanya.
 
-### ✅ Setup yang Disarankan
+### 🧠 2. Kurator Memori Mandiri
+Membawa skrip Python stdlib bawaan yang mengotomatiskan akumulasi pengetahuan proyek lokal. Jika AI memecahkan bug atau membuat keputusan arsitektur sekali saja, AI akan menulisnya ke `.agent/memory/` dan tidak akan pernah melupakannya lagi.
 
-**Buat folder khusus terlebih dahulu:**
-
-```bash
-# Contoh 1: Project Baru
-mkdir proyek-keren-saya
-cd proyek-keren-saya
-# Sekarang jalankan installer di sini ↓
-
-# Contoh 2: Project yang Sudah Ada
-cd /path/ke/project/anda
-# Sekarang jalankan installer di sini ↓
-
-# Contoh 3: Windows (Laragon www/)
-mkdir c:\laragon\www\proyek-saya
-cd c:\laragon\www\proyek-saya
-# Sekarang jalankan installer di sini ↓
-```
-
-### ❌ Kesalahan Umum
-
-```bash
-# ❌ SALAH - Menginstall langsung di root www/
-cd c:\laragon\www\
-iwr -useb ... | iex  # Ini akan membuat .agent/ langsung di folder www/!
-
-# ✅ BENAR - Buat folder project dulu
-cd c:\laragon\www\
-mkdir proyek-saya
-cd proyek-saya
-iwr -useb ... | iex  # Sekarang .agent/ ada di dalam proyek-saya/
-```
-
-### 📁 Apa yang Terinstall
-
-Setelah instalasi, folder Anda akan terlihat seperti ini:
-
-```
-proyek-anda/                # ← Direktori Anda saat ini
-├── AGENTS.md               # ← AI membaca ini pertama kali
-└── .agent/
-    ├── scripts/            # ← Script otomasi Python (6 file)
-    ├── workflows/          # ← AI workflows (6 file) 🆕 FITUR UTAMA
-    ├── memory/             # ← Basis pengetahuan Anda
-    │   ├── index.json
-    │   └── entries/
-    │       ├── gotchas/
-    │       ├── patterns/
-    │       ├── decisions/
-    │       └── context/
-    └── context/            # ← Deteksi lingkungan
-        └── environment.json
-```
+### ⚡ Installer Tanpa Dependensi
+Tanpa perlu `npm install`, tanpa `pip install`. Terpasang dalam 1 detik melalui satu baris perintah asli curl/Powershell, hanya mengunduh skrip Python pustaka standar dan alur kerja markdown yang bersih.
 
 ---
 
-## ⚡ Quick Install Command
-
-### Linux/Mac (Satu baris)
-```bash
-curl -sL https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.sh | bash
-```
-
-### Windows PowerShell (Satu baris)
-```powershell
-iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex
-```
-
-### Manual
-```bash
-git clone https://github.com/andiupn/andy-universal-agent-rules.git
-cp -r andy-universal-agent-rules/.agent ./
-cp andy-universal-agent-rules/AGENTS.md ./
-rm -rf andy-universal-agent-rules  # bersih-bersih
-```
-
----
-
-## 🎯 Apa Ini?
-
-Sebuah **sistem manajemen pengetahuan** untuk asisten koding AI. Daripada menjelaskan bug dan solusi yang sama setiap kali memulai sesi chat, AI Anda akan mengingat:
-
-- ❌ **Gotchas** - Bug produksi & cara menghindarinya
-- ✅ **Patterns** - Pola koding yang terbukti berhasil
-- 📐 **Decisions** - Pilihan arsitektur software & alasannya
-- 📚 **Context** - Panduan spesifik project
-
-**Hasilnya:** Asisten AI Anda menjadi semakin pintar seiring berjalannya waktu.
-
----
-
-## 💡 Contoh Penggunaan Nyata
-
-> Lihat bagaimana knowledge base menghemat waktu debugging berjam-jam.
-
-### Skenario: Bug Koneksi MySQL 🐛
-
-**Hari ke-1 - Developer Baru Bergabung:**
-```
-Developer: "Tolong, MySQL connection refused!"
-AI: "Saya tidak tahu setup Anda. Coba cek portnya..."
-Developer: *Googling 30 menit*
-Solusi: Gunakan 127.0.0.1 bukan localhost di Windows
-```
-
-**Developer menyimpan pembelajaran:**
-```bash
-python .agent/scripts/save-knowledge.py --category gotchas \
-  "MySQL Windows: Gunakan 127.0.0.1 bukan localhost"
-```
-
-**Hari ke-30 - Developer Lain Kena Error Sama:**
-```
-Developer: "Tolong, MySQL connection refused!"
-AI: "Saya menemukan gotcha di knowledge base Anda! 
-     Gunakan 127.0.0.1 bukan localhost di Windows."
-Developer: *Selesai dalam 5 detik* ✅
-```
-
-**Waktu yang dihemat:** 30 menit → 5 detik 🚀
-
-### Contoh Lainnya:
-
-| Masalah | Tanpa Knowledge Base | Dengan Knowledge Base |
-|---------|----------------------|----------------------|
-| Bug commit Oracle | Debug 2 jam | Selesai 1 menit |
-| Konflik versi PHP | Google 15 menit | AI langsung tahu |
-| API rate limit | Trial & error | Pattern sudah tersimpan |
-
-**AI Anda belajar dari kesalahan ANDA sehingga tidak pernah terulang!**
-
----
-
-## 🔧 Editor yang Didukung
-
-| Editor | Status |
-|--------|--------|
-| **VSCode + GitHub Copilot** | ✅ |
-| **Cursor AI** | ✅ |
-| **Kiro AI** | ✅ |
-| **Windsurf Editor** | ✅ |
-| **Antigravity (Gemini/Claude)** | ✅ |
-
----
-
-## 🔧 OS yang Didukung
-
-| OS | Installer |
-|----|-----------|
-| **Linux** | `install.sh` |
-| **macOS** | `install.sh` |
-| **Windows** | `install.ps1` |
-
----
-
-## 📁 Yang Diinstal
+## 📂 Peta Direktori Visual
 
 ```
 your-project/
-├── AGENTS.md               # AI membaca ini lebih dulu
-└── .agent/
-    ├── scripts/            # Script otomasi
-    │   ├── save-knowledge.py
-    │   ├── search-knowledge.py
-    │   ├── validate-index.py
-    │   └── backup-memory.py
-    ├── workflows/          # 🆕 Workflow AI (FITUR INTI)
-    │   ├── maintenance.md
-    │   ├── maintenance-agent-rules.md
-    │   ├── save-from-chat.md
-    │   ├── search.md
-    │   ├── simpan-pengetahuan-dari-chat.md
-    │   └── simpan-pengetahuan-dari-folder.md
-    ├── memory/             # Basis pengetahuan Anda
-    │   ├── index.json
-    │   └── entries/
-    │       ├── gotchas/
-    │       ├── patterns/
-    │       ├── decisions/
-    │       └── context/
-    ├── context/            # Deteksi environment
-    │   └── environment.json
+  .agent/
+    scripts/           # Alat Python tanpa dependensi (Search, Save, Validate)
+    workflows/         # Panduan alur kerja langkah demi langkah (Maintenance, Save)
+  AGENTS.md            # Instruksi sistem AI master (pintu masuk)
+  install.sh           # Installer asli Linux/macOS
+  install.ps1          # Installer asli Windows PowerShell
 ```
 
 ---
 
-## 💡 Cara Penggunaan
+## 🚀 Instalasi (1 Detik)
 
-### 🎮 CLI Interaktif (Direkomendasikan)
-
-Cara termudah mengelola knowledge base — **tanpa Python!**
-
-**Windows:**
+### Windows (PowerShell):
 ```powershell
-powershell -File .agent/scripts/agent-cli.ps1
-```
-
-**Linux/Mac:**
-```bash
-bash .agent/scripts/agent-cli.sh
-```
-
-Membuka menu interaktif:
-```
-╔════════════════════════════════════════════════════╗
-║       andy-universal-agent-rules CLI               ║
-╠════════════════════════════════════════════════════╣
-║ 1. 🔍 Search Knowledge                             ║
-║ 2. 💾 Save New Knowledge                           ║
-║ 3. 🔧 Run Maintenance                              ║
-║ 4. 💼 Backup Memory                                ║
-║ 5. 📊 Show Stats                                   ║
-║ 6. ✅ Validate Index                               ║
-╚════════════════════════════════════════════════════╝
-```
-
-> 💡 **Tips:** CLI otomatis mendeteksi Python. Jika ada, menggunakan fitur penuh. Jika tidak, menggunakan native script dengan fungsionalitas dasar.
-
----
-
-### 📜 Python Scripts (Lanjutan)
-
-Untuk otomasi atau scripting, gunakan Python langsung:
-
-```bash
-# Simpan pengetahuan
-python .agent/scripts/save-knowledge.py --category gotchas "MySQL: Gunakan 127.0.0.1 daripada localhost di Windows"
-
-# Cari pengetahuan
-python .agent/scripts/search-knowledge.py "koneksi mysql"
-
-# Validasi index
-python .agent/scripts/validate-index.py --fix
-
-# Backup
-python .agent/scripts/backup-memory.py
-```
-
----
-
-## 🔄 Menggunakan Workflows
-
-Setelah instalasi, Anda mendapatkan **6 workflows bertenaga AI** yang membuat manajemen pengetahuan menjadi mudah. Cukup bicara dengan AI Anda!
-
-### `/maintenance` - Menjaga Kesehatan Knowledge Base
-
-Memvalidasi index, membuat backup, memperbarui lingkungan secara otomatis.
-
-**Penggunaan:**
-```
-"Run the maintenance workflow"
-"Lakukan maintenance pada knowledge base"
-```
-
-**Apa yang dilakukannya:**
-- ✅ Validasi integritas `index.json`
-- ✅ Membuat backup dari `.agent/memory/`
-- ✅ Memperbarui deteksi lingkungan (environment)
-- ✅ Sinkronisasi statistik ke AGENTS.md
-
----
-
-### `/save-from-chat` - Simpan Pembelajaran Sesi Ini
-
-Memindai chat Anda untuk mencari gotchas, patterns, dan decisions untuk disimpan secara otomatis.
-
-**Penggunaan:**
-```
-"Save learnings from this chat"
-"Simpan pengetahuan dari percakapan kita"
-```
-
-**Apa yang dilakukannya:**
-- 🔍 Menganalisa riwayat chat
-- 📝 Mengekstrak gotchas, patterns, decisions
-- 💾 Menyimpan ke `.agent/memory/entries/`
-- 🔄 Memperbarui index secara otomatis
-
----
-
-### `/search` - Cari Pengetahuan yang Ada
-
-Pencarian cepat sebelum mulai bekerja untuk menghindari penemuan ulang solusi yang sudah ada.
-
-**Penggunaan:**
-```
-"Search for MySQL gotchas"
-"Cari info tentang autentikasi"
-```
-
-**Apa yang dilakukannya:**
-- 🔎 Mencari di semua kategori
-- 📊 Mengurutkan berdasarkan relevansi
-- 📄 Menampilkan entri yang cocok beserta konteksnya
-
----
-
-### Workflows Bahasa Indonesia 🇮🇩
-
-Khusus untuk pengguna berbahasa Indonesia:
-- `/simpan-pengetahuan-dari-chat` - Simpan dari percakapan
-- `/simpan-pengetahuan-dari-folder` - Simpan dari folder
-
----
-
-**Pro Tip:** Workflows bekerja paling baik dengan:
-- ✅ Antigravity (Gemini/Claude)
-- ✅ Cursor (Agent Mode)
-- ✅ Kiro AI
-
-Untuk editor lain, gunakan script Python secara langsung:
-```bash
-python .agent/scripts/save-knowledge.py --category gotchas "Gotcha Anda"
-```
-
----
-
-## 🧠 Keajaibannya: Priority Loading
-
-Ketika AI membuka project Anda, sistem otomatis memuat:
-
-1. 🚨 **Critical Gotchas** (hindari bug)
-2. 📊 **Environment Info** (OS, stack, versi)
-3. 🔝 **Top Patterns** (solusi yang paling sering dipakai)
-4. 📝 **Project Context** (tentang apa project ini)
-
-**AI Anda mengenali project Anda bahkan sebelum Anda bertanya.**
-
----
-
-## ❓ FAQ (Tanya Jawab)
-
-### Apa bedanya dengan hanya menggunakan `.cursorrules`?
-
-**`.cursorrules`** adalah satu file statis yang dibaca AI sekali saja.
-
-**andy-universal-agent-rules** adalah **sistem manajemen pengetahuan dinamis**:
-- ✅ **Basis pengetahuan yang bisa dicari** - Temukan solusi dari bug masa lalu
-- ✅ **Script untuk otomasi** - Simpan, cari, validasi, backup
-- ✅ **Workflows** - Perintah siap pakai seperti `/maintenance`, `/save-from-chat`
-- ✅ **Support lintas editor** - Bekerja dengan Cursor, VSCode, Kiro, Windsurf, Antigravity
-- ✅ **Berkembang seiring waktu** - AI Anda makin pintar saat Anda menambah pengetahuan
-
-Anggap ini sebagai `.cursorrules` + Git untuk memori AI Anda.
-
-### Bisakah saya gunakan ini untuk banyak project?
-
-**Ya!** Install di setiap project secara terpisah:
-
-```bash
-# Project 1
-cd ~/projects/aplikasi-saya
-iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex
-
-# Project 2
-cd ~/projects/aplikasi-lain
 iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex
 ```
 
-Setiap project punya basis pengetahuan (memory) yang independen di `.agent/memory/`.
-
-### Bagaimana cara uninstall?
-
-Cukup hapus foldernya:
-
+### Linux / macOS (Bash):
 ```bash
-# Hapus aturan agen
-rm -rf .agent
-rm AGENTS.md
-
-# Atau di Windows PowerShell
-Remove-Item -Recurse -Force .agent
-Remove-Item AGENTS.md
+curl -fsSL https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.sh | bash
 ```
-
-**Opsional:** Hapus dari riwayat git jika sudah di-commit:
-```bash
-git rm -r .agent AGENTS.md
-git commit -m "Hapus andy-universal-agent-rules"
-```
-
-### Apakah ini bekerja offline?
-
-**Ya!** Setelah instalasi, semuanya berjalan offline:
-- ✅ Script berjalan lokal (hanya Python stdlib)
-- ✅ Basis pengetahuan tersimpan lokal
-- ✅ Tidak butuh API call atau internet
-
-**Internet hanya butuh saat:**
-- Instalasi (download file)
-- Menggunakan fitur AI (AI-nya yang butuh internet, bukan tool ini)
-
-### Apakah ini akan memperlambat editor saya?
-
-**Tidak!** Sistem ini:
-- ✅ **Pasif** - Hanya dibaca AI saat dibutuhkan
-- ✅ **Ringan** - Script Python total ~50KB
-- ✅ **Cepat** - Semua script berjalan <500ms (lihat benchmark)
-
-Performa editor Anda tidak akan terpengaruh.
 
 ---
 
-## 🔧 Troubleshooting
+## 💖 Dukung Proyek Ini (Donasi)
 
-### Python not found
-
-**Error:** `python: command not found` atau `'python' is not recognized`
-
-**Solusi:**
-
-**Windows:**
-```powershell
-# Download Python dari python.org
-# Atau install via winget
-winget install Python.Python.3.12
-
-# Verifikasi instalasi
-python --version
-```
-
-**Linux/Mac:**
-```bash
-# Ubuntu/Debian
-sudo apt install python3
-
-# macOS
-brew install python3
-
-# Verifikasi
-python3 --version
-```
-
-### Permission errors saat instalasi
-
-**Error:** `Permission denied` atau `Access is denied`
-
-**Solusi:**
-
-**Windows:**
-```powershell
-# Jalankan PowerShell sebagai Administrator
-# Klik kanan PowerShell → "Run as administrator"
-```
-
-**Linux/Mac:**
-```bash
-# Jangan gunakan sudo dengan installer!
-# Pastikan Anda punya akses tulis ke direktori saat ini
-cd ~/projects/proyek-saya
-curl -sL ... | bash
-```
-
-### Git conflicts dengan folder `.agent/`
-
-**Error:** Merge conflicts di `.agent/memory/`
-
-**Solusi:**
-
-**Opsi 1: Simpan versi Anda (disarankan)**
-```bash
-git checkout --ours .agent/memory/
-git add .agent/memory/
-git commit
-```
-
-**Opsi 2: Merge manual**
-```bash
-# Selesaikan konflik di .agent/memory/index.json
-# Pertahankan kedua basis pengetahuan jika perlu
-git add .agent/memory/
-git commit
-```
-
-**Pencegahan:** Tambahkan ke `.gitignore`:
-```
-.agent/memory/entries/
-.agent/context/environment.json
-```
-
-### Workflows tidak bekerja / tidak ditemukan
-
-**Error:** AI bilang "workflow not found" atau `/maintenance` tidak jalan
-
-**Solusi:**
-
-1. **Verifikasi workflows terinstall:**
-```bash
-ls .agent/workflows/
-# Harusnya muncul: maintenance.md, save-from-chat.md, dll.
-```
-
-2. **Reinstall jika hilang:**
-```bash
-iwr -useb https://raw.githubusercontent.com/andiupn/andy-universal-agent-rules/main/install.ps1 | iex
-```
-
-3. **Cek kompatibilitas editor:**
-   - Workflows bekerja dengan: Antigravity, Cursor (Agent Mode), Kiro
-   - Untuk VSCode/Copilot: Gunakan script langsung
-
-### Script error `ModuleNotFoundError`
-
-**Error:** `ModuleNotFoundError: No module named 'xyz'`
-
-**Ini TIDAK BOLEH terjadi!** Semua script hanya menggunakan Python standard library.
-
-**Jika terjadi:**
-```bash
-# Cek versi Python (harus 3.10+)
-python --version
-
-# Pastikan menggunakan system Python, bukan venv
-which python  # Linux/Mac
-where python  # Windows
-```
-
-**Masih error?** [Laporkan isu](https://github.com/andiupn/andy-universal-agent-rules/issues)
+Jika templat ini membantu mempercepat alur kerja pengodean Anda, pertimbangkan untuk memberikan dukungan:
+- **Ko-fi:** [ko-fi.com/andiupn](https://ko-fi.com/andiupn)
+- **Patreon:** [patreon.com/AndiUpn](https://patreon.com/AndiUpn)
+- **Trakteer (Indonesia):** [trakteer.id/andi_upn/gift](https://trakteer.id/andi_upn/gift)
+- **Saweria (Indonesia):** [saweria.co/andiupn](https://saweria.co/andiupn)
 
 ---
 
-## 💖 Dukung Project Ini
+## 📄 Lisensi
 
-Jika ini menghemat waktu debugging Anda, pertimbangkan untuk mendukung:
-
-| Platform | Link |
-|----------|------|
-| **Ko-fi** | [ko-fi.com/andiupn](https://ko-fi.com/andiupn) |
-| **Patreon** | [patreon.com/AndiUpn](https://www.patreon.com/cw/AndiUpn) |
-| **Trakteer** 🇮🇩 | [trakteer.id/andi_upn](https://trakteer.id/andi_upn/gift) |
-| **Saweria** 🇮🇩 | [saweria.co/andiupn](https://saweria.co/andiupn) |
-
----
-
-## 📜 Lisensi
-
-MIT License - Gunakan di mana saja, modifikasi dengan bebas.
-
-**Riwayat versi:** Lihat [CHANGELOG.md](CHANGELOG.md).
-
----
-
-## 🌟 Star Repo Ini!
-
-Jika Anda merasa ini bermanfaat, tolong kasih ⭐ star di repo ini untuk membantu orang lain menemukannya!
-
----
-
-*Dibuat dengan ❤️ oleh Andi UPN*
+Proyek ini dilisensikan di bawah **MIT License**. Lihat berkas [LICENSE](LICENSE) untuk informasi lebih lanjut.
