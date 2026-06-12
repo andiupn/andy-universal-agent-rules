@@ -1,14 +1,14 @@
 # Zasady Andy'ego Universal Agent 🛰️
 
 <div align="center">
-  <strong>Angielski</strong> | <a href="README.id.md">Bahasa Indonezja</a> | <a href="README.zh.md">简体中文</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.fr-ca.md">Français (Kalifornia)</a> | <a href="README.de.md">Deutsch</a> | <a href="README.fr.md">Francja</a> | <a href="README.pt-br.md">Portugalski (BR)</a> | <a href="README.vi.md">Tiếng Việt</a> | <a href="README.pl.md">Polski</a>
+  <a href="README.md">English</a> | <a href="README.id.md">Bahasa Indonesia</a> | <a href="README.zh.md">简体中文</a> | <a href="README.hi.md">हिन्दी</a> | <a href="README.fr-ca.md">Français (CA)</a> | <a href="README.de.md">Deutsch</a> | <a href="README.fr.md">Français</a> | <a href="README.pt-br.md">Português (BR)</a> | <a href="README.vi.md">Tiếng Việt</a> | <strong>Polski</strong> | <a href="README.ja.md">日本語</a> | <a href="README.ko.md">한국어</a> | <a href="README.es.md">Español</a> | <a href="README.tr.md">Türkçe</a> | <a href="README.it.md">Italiano</a> | <a href="README.ru.md">Русский</a> | <a href="README.uk.md">Українська</a> | <a href="README.nl.md">Nederlands</a>
 </div>
 
 <br />
 
 <div align="center">
   <h3><strong>Najlepszy model sztucznej inteligencji jest bezużyteczny bez odpowiednich instrukcji.</strong></h3>
-  <p><strong> Lekki, jednowierszowy instalator o zerowej zależności, który w ciągu 1 sekundy wprowadza do dowolnego obszaru roboczego reguły kodowania zgodne ze złotym standardem, dyrektywy agenta otonom i skrypty sprawdzające pamięć.</strong></p>
+  <p><strong>Lekki, jednowierszowy instalator o zerowej zależności, który w ciągu 1 sekundy wprowadza do dowolnego obszaru roboczego reguły kodowania zgodne ze złotym standardem, dyrektywy agenta otonom i skrypty sprawdzające pamięć.</strong></p>
 
   <p>Przestań cierpieć na halucynacje AI, nieuporządkowaną refaktoryzację kodu i utratę kontekstu podczas sesji redaktora. Natychmiast wzmocnij obszary robocze Cursor, Gemini, Claude Code i Windsurf.</p>
 </div>
